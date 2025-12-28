@@ -1,0 +1,83 @@
+.navbar {
+  width: 100%;
+  background-color: #111;
+  padding: 15px 0;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #00bcd4;
+}
+
+.signup-btn {
+  padding: 6px 12px;
+  background-color: #00bcd4;
+  border-radius: 4px;
+  color: #000 !important;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #111;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
