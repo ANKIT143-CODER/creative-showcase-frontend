@@ -30,11 +30,34 @@ export default function Dashboard() {
     fetchMyImages()
   }, [])
 
+  // 🗑 Delete handler
+  const handleDelete = async (id) => {
+    const confirmDelete = window.confirm(
+      'Are you sure you want to delete this image?'
+    )
+    if (!confirmDelete) return
+
+    try {
+      const token = localStorage.getItem('token')
+
+      await API.delete(`/images/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+
+      // Remove image from UI
+      setImages(images.filter((img) => img._id !== id))
+    } catch (error) {
+      alert('Failed to delete image')
+    }
+  }
+
   return (
     <div style={{ padding: '20px' }}>
       <h2>Your Dashboard</h2>
 
-      {/* Upload Form */}
+      {/* Upload */}
       <UploadForm />
 
       <h3 style={{ marginTop: '30px' }}>Your Uploads</h3>
@@ -53,6 +76,7 @@ export default function Dashboard() {
               <ImageCard
                 key={img._id}
                 image={`https://creative-showcase-backend-43.onrender.com${img.imageUrl}`}
+                onDelete={() => handleDelete(img._id)}
               />
             ))
           )}
