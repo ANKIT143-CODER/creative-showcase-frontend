@@ -31,7 +31,7 @@ export default function LandingPage() {
 
       <div className="masonry">
         {images.map((img) => (
-          <ImageCard key={img._id} image={`https://creative-showcase-backend-1.onrender.com${img.imageUrl}`} />
+          <ImageCard key={img._id} image={`https://creative-showcase-backend-43.onrender.com${img.imageUrl}`} />
         ))}
       </div>
     </div>
