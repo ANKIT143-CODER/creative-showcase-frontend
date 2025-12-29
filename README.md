@@ -170,7 +170,7 @@ The backend automatically creates the `uploads/` directory in production to avoi
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Ankit Mandal**
 B.Tech CSE Student
 India
 
