@@ -33,7 +33,7 @@ export default function LandingPage() {
         {images.map((img) => (
           <ImageCard
             key={img._id}
-            image={`https://YOUR-BACKEND.onrender.com${img.imageUrl}`}
+            image={`https://creative-showcase-backend-43.onrender.com${img.imageUrl}`}
             title={img.title}
           />
         ))}
