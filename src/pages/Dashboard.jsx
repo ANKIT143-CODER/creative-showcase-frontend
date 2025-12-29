@@ -52,7 +52,7 @@ export default function Dashboard() {
             images.map((img) => (
               <ImageCard
                 key={img._id}
-                image={`https://creative-showcase-backend-1.onrender.com${img.imageUrl}`}
+                image={`https://creative-showcase-backend-43.onrender.com${img.imageUrl}`}
               />
             ))
           )}
