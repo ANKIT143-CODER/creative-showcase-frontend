@@ -1,3 +1,4 @@
+import '../../styles/gallery.css'
 export default function ImageCard({ image, title, onDelete }) {
   return (
     <div className="image-card">
