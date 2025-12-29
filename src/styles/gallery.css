@@ -1,19 +1,45 @@
+/* ================= MASONRY GRID ================= */
 .masonry {
   column-count: 4;
   column-gap: 16px;
   margin-top: 20px;
 }
 
+/* ================= IMAGE CARD ================= */
 .image-card {
+  break-inside: avoid;
   margin-bottom: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Image */
 .image-card img {
   width: 100%;
-  border-radius: 8px;
+  display: block;
+  border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 1024px) {
+/* ================= DELETE BUTTON ================= */
+.delete-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #e53935;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
   .masonry {
     column-count: 3;
   }
